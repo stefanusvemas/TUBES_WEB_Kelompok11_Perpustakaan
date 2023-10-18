@@ -16,7 +16,7 @@
             <div class="container">
                 <a class="navbar-brand" href="#">Perpus</a>
 
-                <a class="btn btn-outline-success " href="#">LOGIN</a>
+                <a class="btn btn-outline-success" href="{{url('login')}}">LOGIN</a>
             </div>
         </nav>
     </header>
