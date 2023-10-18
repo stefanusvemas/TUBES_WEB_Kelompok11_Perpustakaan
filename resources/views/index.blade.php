@@ -12,11 +12,11 @@
 
 <body>
     <header>
-        <nav class="navbar justify-content-between">
+        <nav class="navbar justify-content-between py-2" style="background-color: #87aba1;">
             <div class="container">
-                <a class="navbar-brand" href="#">Perpus</a>
+                <a class="navbar-brand text-light" href="#">Perpus</a>
 
-                <a class="btn btn-outline-success" href="{{url('login')}}">LOGIN</a>
+                <a class="btn btn-light" href="{{url('login')}}">LOGIN</a>
             </div>
         </nav>
     </header>

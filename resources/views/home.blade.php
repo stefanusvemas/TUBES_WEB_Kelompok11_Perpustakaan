@@ -21,7 +21,24 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-3 mt-4">
-                        <div class="card">
+                        <div class="card h-100">
+                            <img src="{{'images/book_cover.jpeg'}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title">Judul Buku</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">Penulis</h6>
+                                    </div>
+                                    <div class="col-auto text-end">
+                                        <span class="badge bg-primary">Technology</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3 mt-4">
+                        <div class="card h-100">
                             <img src="{{'images/book_cover.jpeg'}}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="row">
@@ -38,7 +55,7 @@
                     </div>
 
                     <div class="col-sm-3 mt-4">
-                        <div class="card">
+                        <div class="card h-100">
                             <img src="{{'images/book_cover.jpeg'}}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="row">
@@ -55,7 +72,7 @@
                     </div>
 
                     <div class="col-sm-3 mt-4">
-                        <div class="card">
+                        <div class="card h-100">
                             <img src="{{'images/book_cover.jpeg'}}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="row">
@@ -72,24 +89,7 @@
                     </div>
 
                     <div class="col-sm-3 mt-4">
-                        <div class="card">
-                            <img src="{{'images/book_cover.jpeg'}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="card-title">Judul Buku</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">Penulis</h6>
-                                    </div>
-                                    <div class="col text-end">
-                                        <span class="badge bg-primary">Technology</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3 mt-4">
-                        <div class="card">
+                        <div class="card h-100">
                             <img src="{{'images/book_cover.jpeg'}}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="row">
