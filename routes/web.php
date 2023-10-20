@@ -42,9 +42,51 @@ Route::get('/user/profile', function () {
 });
 
 Route::get('/admin', function () {
-    return view('admin/dashboard_admin');
+    return view('admin/dashboard_admin', [
+        'petugas' => [
+            'nama' => 'Admin',
+        ],
+        'buku' =>     [
+            [
+                'no' => 1,
+                'judul' => 'Lorem',
+                'pengarang' => 'Doe',
+                'penerbit' => 'Atma Jaya'
+            ],
+            [
+                'no' => 2,
+                'judul' => 'Ipsum',
+                'pengarang' => 'Joe',
+                'penerbit' => 'UAJY Lib'
+            ]
+        ]
+    ]);
 });
 
 Route::get('/admin/tambah_peminjaman', function () {
     return view('admin/tambah_peminjaman');
+});
+
+Route::get('/admin/pengembalian', function () {
+    return view('admin/pengembalian_buku');
+});
+
+Route::get('/admin/tambah_buku', function () {
+    return view('admin/tambah_buku');
+});
+
+Route::get('/admin/tambah_buku/tambah_pengarang', function () {
+    return view('admin/tambah_pengarang');
+});
+
+Route::get('/admin/tambah_buku/tambah_penerbit', function () {
+    return view('admin/tambah_penerbit');
+});
+
+Route::get('/admin/tambah_buku/tambah_kategori', function () {
+    return view('admin/tambah_kategori');
+});
+
+Route::get('/admin/edit_buku', function () {
+    return view('admin/edit_buku');
 });
