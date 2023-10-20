@@ -18,36 +18,38 @@
     </header>
 
     <main>
-        <div class=" container">
-            <div class="row justify-content-center">
-                <img src="{{'images/book _of_ideas.png'}}" alt="" style="width: 230px; padding-left: 50px" />
-            </div>
+        <div class="container my-4">
             <div class="row justify-content-center mt-1">
                 <div class="col-10 col-md-5">
-                    <div class="card">
+                    <div class="card mt-4">
                         <div class="card-body" style="padding: 20px 30px">
                             <div class="card-title text-center">
-                                <h3>LOGIN</h3>
+                                <h3>REGISTER</h3>
                             </div>
-                            <form action="{{url('user')}}" id="loginForm">
+                            <form action="#" id="loginForm">
+                                <label for="nama">Nama</label>
+                                <input type="text" id="nama" class="form-control mb-2 py-2" required />
+
+                                <label for="alamat">Alamat</label>
+                                <input type="text" id="alamat" class="form-control mb-2 py-2" required />
+
+                                <label for="noTelp">No Telp</label>
+                                <input type="tel" id="noTelp" class="form-control mb-2 py-2" required />
+
                                 <label for="email">Email</label>
-                                <input type="email" id="email" class="form-control mb-2 py-2" placeholder="Masukkan email" required />
+                                <input type="email" id="email" class="form-control mb-2 py-2" required />
 
                                 <label for="password">Password</label>
-                                <input type="password" id="password" class="form-control mb-2 py-2" placeholder="Masukkan password" required />
+                                <input type="password" id="password" class="form-control mb-2 py-2" required />
 
-                                <p class="text-center">Belum punya akun? <a href="{{url('register')}}">daftar</a></p>
+                                <p class="text-center">Sudah punya akun? <a href="{{url('login')}}">login</a></p>
 
-                                <div class="row g-2">
+                                <div class="row g-2 mt-2">
                                     <div class="col">
                                         <button type="submit" class="btn w-100" style="background-color: #dba058; color: #fff">
-                                            Login
+                                            Daftar
                                         </button>
                                     </div>
-                                    <div class="col-auto">
-                                        <a href="{{url('admin/login')}}" type="button" class="btn" style="background-color: #dba058"><i class="fa-solid fa-user-tie" style="color: #ffffff;"></i></a>
-                                    </div>
-
                                 </div>
 
                             </form>

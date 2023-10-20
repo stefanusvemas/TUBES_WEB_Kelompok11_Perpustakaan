@@ -10,17 +10,31 @@
 
 </head>
 
-<body>
-    <header>
+<body class="d-flex flex-column min-vh-100">
+    <header class="mb-4">
         <nav class="navbar justify-content-between py-2" style="background-color: #87aba1;">
-            <div class="container">
+            <div class="container py-2">
                 <a class="navbar-brand text-light" href="#">Perpus</a>
-                <a class="btn btn-light" href="{{url('login')}}">LOGIN</a>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-auto">
+                        <div class="card" style="background-color: inherit; border: none; color: white;">
+                            <a href="#" class="btn btn-sm" style="color: white; text-align:center;">
+                                Admin
+                                <img class="rounded-circle" alt="avatar1" src="{{'../images/person.jpg'}}" style="width: 40px;" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <a class="text-light" href="{{url('')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
+
     @yield('content')
-    <footer>
+
+    <footer class="mt-auto">
         <nav class="navbar justify-content-between mt-4" style="background-color: #dba058;">
             <div class="container" style="height: 40px;">
                 <p class="text-light">©️Pemrograman Web B - Kelompok 11</p>
