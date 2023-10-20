@@ -32,38 +32,7 @@
 
 
 
-                <!-- TABLE BUKU -->
-                <hr>
-                <h4 class="mt-4">List Buku</h4>
-                <div class="table-responsive">
-                    <table class="table table-striped table-hover">
-                        <thead class="table-light">
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Judul Buku</th>
-                                <th scope="col">Pengarang</th>
-                                <th scope="col">Penerbit</th>
-                                <th scope="col">Jumlah</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Lorem</td>
-                                <td>Doe</td>
-                                <td>Atma Jaya Lib</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Ipsum</td>
-                                <td>John</td>
-                                <td>UAJY</td>
-                                <td>5</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+
 
             </div>
         </div>

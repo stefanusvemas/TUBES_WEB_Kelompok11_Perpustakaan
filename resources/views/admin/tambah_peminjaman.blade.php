@@ -53,22 +53,23 @@
                                 <th scope="col">Jumlah</th>
                             </tr>
                         </thead>
+                        @forelse ($buku as $item)
                         <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Lorem</td>
-                                <td>Doe</td>
-                                <td>Atma Jaya Lib</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Ipsum</td>
-                                <td>John</td>
-                                <td>UAJY</td>
-                                <td>5</td>
+                                <th scope="row">{{$item['no']}}</th>
+                                <td>{{$item['judul']}}</td>
+                                <td>{{$item['pengarang']}}</td>
+                                <td>{{$item['penerbit']}}</td>
+                                <td>{{$item['jumlah']}}</td>
                             </tr>
                         </tbody>
+                        @empty
+                        <tbody>
+                            <tr>
+                                <td colspan="5" class="text-center">Tidak ada data</td>
+                            </tr>
+                        </tbody>
+                        @endforelse
                     </table>
                 </div>
                 <div class="row justify-content-end">

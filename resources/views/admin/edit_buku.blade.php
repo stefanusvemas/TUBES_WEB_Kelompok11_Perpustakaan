@@ -30,10 +30,8 @@
                                 <option value="3">El</option>
                             </select>
                         </div>
-                        <div class="col-auto">
-                            <a href="{{url('/admin/tambah_buku/tambah_pengarang')}}" type="button" class="btn btn-primary"><i class="fa-solid fa-plus"></i></a>
-                        </div>
                     </div>
+
                     <div class="row justify-content-start align-items-end">
                         <div class="col-auto">
                             <label for="stok">Stok</label>
@@ -48,11 +46,8 @@
                                 <option value="3">Jaya Library</option>
                             </select>
                         </div>
-                        <div class="col-auto">
-                            <a href="{{url('/admin/tambah_buku/tambah_penerbit')}}" type="button" class="btn btn-primary"><i class="fa-solid fa-plus"></i></a>
-                        </div>
-
                     </div>
+
                     <div class="row justify-content-start align-items-end">
                         <div class="col-auto">
                             <label for="kategori">Kategori</label>
@@ -63,13 +58,10 @@
                                 <option value="3">Education</option>
                             </select>
                         </div>
-                        <div class="col-auto">
-                            <a href="{{url('/admin/tambah_buku/tambah_kategori')}}" type="button" class="btn btn-primary"><i class="fa-solid fa-plus"></i></a>
-                        </div>
                     </div>
 
-                    <div class="row justify-content-end align-items-end">
-                        <div class="col-auto">
+                    <div class="row justify-contentstart justify-content-lg-end align-items-end">
+                        <div class="col-auto mt-2 mt-lg-0">
                             <button type="submit" class="btn btn-success w-100">Simpan</button>
                         </div>
                     </div>

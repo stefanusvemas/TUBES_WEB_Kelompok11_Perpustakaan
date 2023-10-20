@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <header>
         <nav class="navbar justify-content-between py-2" style="background-color: #87aba1;">
             <div class="container">
@@ -20,7 +20,7 @@
         </nav>
     </header>
     @yield('content')
-    <footer>
+    <footer class="mt-auto">
         <nav class="navbar justify-content-between mt-4" style="background-color: #dba058;">
             <div class="container" style="height: 40px;">
                 <p class="text-light">©️Pemrograman Web B - Kelompok 11</p>

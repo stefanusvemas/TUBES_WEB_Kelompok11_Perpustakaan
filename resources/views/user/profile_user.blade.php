@@ -14,10 +14,10 @@
                 </nav>
                 <div class="row mt-4 align-items-center justify-content-sm-start justify-content-center">
                     <div class="col-auto col-sm-auto">
-                        <img class="rounded-circle" alt="avatar1" src="{{'../images/person.jpg'}}" style="width: 160px;" />
+                        <img class="rounded-circle" alt="avatar1" src="{{$user['profile_picture']}}" style="width: 160px;" />
                     </div>
                     <div class="col-auto col-sm-6">
-                        <h4>John Doe</h4>
+                        <h4>{{$user['nama']}}</h4>
                     </div>
                 </div>
                 <hr>
@@ -28,17 +28,17 @@
                         <div class="row mt-4">
                             <div class="col-auto col-sm-6">
                                 <label for="nama" class="form-label">Nama</label>
-                                <input type="text" class="form-control" value="John Doe">
+                                <input type="text" class="form-control" value="{{$user['nama']}}">
                             </div>
                             <div class="col-auto col-sm-6 mt-sm-0 mt-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" value="johndoe@gmail.com">
+                                <input type="email" class="form-control" value="{{$user['email']}}">
                             </div>
                         </div>
                         <div class="row mt-4">
                             <div class="col-auto col-sm-6">
                                 <label for="alamat" class="form-label">Alamat</label>
-                                <input type="text" class="form-control" value="Babarsari">
+                                <input type="text" class="form-control" value="{{$user['alamat']}}">
                             </div>
                             <div class="col-auto col-sm-6 mt-sm-0 mt-3">
                                 <label for="password" class="form-label">Password</label>
@@ -48,7 +48,7 @@
                         <div class="row mt-4">
                             <div class="col-auto col-sm-6">
                                 <label for="telp" class="form-label">No Telp</label>
-                                <input type="tel" class="form-control" value="0812345689">
+                                <input type="tel" class="form-control" value="{{$user['no_telp']}}">
                             </div>
                             <div class="col-auto col-sm-6 mt-sm-0 mt-3">
                                 <label for="fotoProfil" class="form-label">Foto Profil</label>

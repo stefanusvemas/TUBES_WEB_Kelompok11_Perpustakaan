@@ -20,7 +20,7 @@
                             <label for="nama">Nama peminjam</label>
                             <input type="text" id="nama" class="form-control" required>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-auto mt-2 mt-md-0">
                             <button type="submit" class="btn btn-success w-100">Cari</button>
                         </div>
                     </div>
@@ -42,22 +42,23 @@
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
+                        @forelse ($buku as $item)
                         <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Lorem</td>
-                                <td>20/10/2023</td>
-                                <td>0</td>
-                                <td><a href="#">Perpanjang</a> | <a href="#">Dikembalikan</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Lorem</td>
-                                <td>17/10/2023</td>
-                                <td>10000</td>
+                                <th scope="row">{{$item['no']}}</th>
+                                <td>{{$item['judul']}}</td>
+                                <td>{{$item['jadwalKembali']}}</td>
+                                <td>{{$item['denda']}}</td>
                                 <td><a href="#">Perpanjang</a> | <a href="#">Dikembalikan</a></td>
                             </tr>
                         </tbody>
+                        @empty
+                        <tbody>
+                            <tr>
+                                <td colspan="5" class="text-center">Tidak ada buku yang dipinjam</td>
+                            </tr>
+                        </tbody>
+                        @endforelse
                     </table>
                 </div>
                 <div class="row justify-content-end">

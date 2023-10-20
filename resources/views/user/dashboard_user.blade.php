@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col">
-                                        <p class="card-subtitle text-center">Rp. 50000</p>
+                                        <p class="card-subtitle text-center">Rp. {{number_format($user['denda'],)}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -37,7 +37,7 @@
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col">
-                                        <p class="card-subtitle text-center">3</p>
+                                        <p class="card-subtitle text-center">{{count($buku_dipinjam)}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -61,26 +61,22 @@
                                 <th scope="col">Sisa Durasi</th>
                             </tr>
                         </thead>
+                        @forelse ($buku_dipinjam as $item => $value)
                         <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Lorem</td>
-                                <td>19/10/2023</td>
-                                <td>2 Hari</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Consectetur</td>
-                                <td>19/10/2023</td>
-                                <td>4 Hari</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Ipsum</td>
-                                <td>18/10/2023</td>
-                                <td>1 Hari</td>
+                                <th scope="row">{{$item+1}}</th>
+                                <td>{{$value['judul']}}</td>
+                                <td>{{$value['tgl_pinjam']}}</td>
+                                <td>{{$value['sisa_durasi']}} hari</td>
                             </tr>
                         </tbody>
+                        @empty
+                        <tbody>
+                            <tr>
+                                <td colspan="5" class="text-center">Tidak ada buku yang dipinjam</td>
+                            </tr>
+                        </tbody>
+                        @endforelse
                     </table>
                 </div>
 
@@ -96,20 +92,22 @@
                                 <th scope="col">Tanggal Kembali</th>
                             </tr>
                         </thead>
+                        @forelse ($riwayat_pinjam as $item => $value)
                         <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Buku</td>
-                                <td>19/10/2023</td>
-                                <td>21/10/2023</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Book</td>
-                                <td>19/10/2023</td>
-                                <td>23/10/2023</td>
+                                <th scope="row">{{$item+1}}</th>
+                                <td>{{$value['judul']}}</td>
+                                <td>{{$value['tgl_pinjam']}}</td>
+                                <td>{{$value['tgl_kembali']}}</td>
                             </tr>
                         </tbody>
+                        @empty
+                        <tbody>
+                            <tr>
+                                <td colspan="5" class="text-center">Tidak ada riwayat peminjaman</td>
+                            </tr>
+                        </tbody>
+                        @endforelse
                     </table>
                 </div>
 

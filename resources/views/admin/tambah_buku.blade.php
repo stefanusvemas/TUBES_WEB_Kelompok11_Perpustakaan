@@ -21,7 +21,7 @@
                             <label for="nama">Judul Buku</label>
                             <input type="text" id="judul" class="form-control" required>
                         </div>
-                        <div class="col-auto col-md-2">
+                        <div class="col-auto col-lg-2">
                             <label for="pengarang">Pengarang</label>
                             <select class="form-select">
                                 <option selected>Pengarang Buku</option>
@@ -39,7 +39,7 @@
                             <label for="stok">Stok</label>
                             <input type="number" id="stok" class="form-control" required>
                         </div>
-                        <div class="col-auto col-md-2">
+                        <div class="col-auto col-lg-2">
                             <label for="penerbit">Penerbit</label>
                             <select class="form-select">
                                 <option selected>Penerbit Buku</option>
@@ -54,7 +54,7 @@
 
                     </div>
                     <div class="row justify-content-start align-items-end">
-                        <div class="col-auto">
+                        <div class="col-auto col-lg-2">
                             <label for="kategori">Kategori</label>
                             <select class="form-select">
                                 <option selected>Kategori Buku</option>
@@ -68,47 +68,12 @@
                         </div>
                     </div>
 
-                    <div class="row justify-content-end align-items-end">
-                        <div class="col-auto">
+                    <div class="row justify-contentstart justify-content-lg-end align-items-end">
+                        <div class="col-auto mt-2 mt-lg-0">
                             <button type="submit" class="btn btn-success w-100">Simpan</button>
                         </div>
                     </div>
                 </form>
-
-
-
-                <!-- TABLE BUKU -->
-                <hr>
-                <h4 class="mt-4">List Buku</h4>
-                <div class="table-responsive">
-                    <table class="table table-striped table-hover">
-                        <thead class="table-light">
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Judul Buku</th>
-                                <th scope="col">Pengarang</th>
-                                <th scope="col">Penerbit</th>
-                                <th scope="col">Jumlah</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Lorem</td>
-                                <td>Doe</td>
-                                <td>Atma Jaya Lib</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Ipsum</td>
-                                <td>John</td>
-                                <td>UAJY</td>
-                                <td>5</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
 
             </div>
         </div>

@@ -14,7 +14,52 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        'buku' => [
+            [
+                'no' => 1,
+                'judul' => 'Lorem',
+                'bookCover' => 'images/book_cover.jpeg',
+                'pengarang' => 'Doe',
+                'kategori' => 'Technology'
+            ],
+            [
+                'no' => 2,
+                'judul' => 'Ipsum',
+                'bookCover' => 'images/book_cover.jpeg',
+                'pengarang' => 'Joe',
+                'kategori' => 'Sains'
+            ],
+            [
+                'no' => 1,
+                'judul' => 'Lorem',
+                'bookCover' => 'images/book_cover.jpeg',
+                'pengarang' => 'Doe',
+                'kategori' => 'Technology'
+            ],
+            [
+                'no' => 3,
+                'judul' => 'Ipsum',
+                'bookCover' => 'images/book_cover.jpeg',
+                'pengarang' => 'Joe',
+                'kategori' => 'Sains'
+            ],
+            [
+                'no' => 4,
+                'judul' => 'Lorem',
+                'bookCover' => 'images/book_cover.jpeg',
+                'pengarang' => 'Doe',
+                'kategori' => 'Technology'
+            ],
+            [
+                'no' => 5,
+                'judul' => 'Ipsum',
+                'bookCover' => 'images/book_cover.jpeg',
+                'pengarang' => 'Joe',
+                'kategori' => 'Sains'
+            ],
+        ]
+    ]);
 });
 
 Route::get('/login', function () {
@@ -30,7 +75,46 @@ Route::get('/register', function () {
 });
 
 Route::get('/user', function () {
-    return view('user/dashboard_user');
+    return view('user/dashboard_user', [
+        'user' => [
+            'nama' => 'User',
+            'denda' => 50000,
+        ],
+        'buku_dipinjam' => [
+            [
+                'no' => 1,
+                'judul' => 'Kamus',
+                'tgl_pinjam' => '18/10/2023',
+                'sisa_durasi' => '2'
+            ],
+            [
+                'no' => 2,
+                'judul' => 'Lorem Ipsum',
+                'tgl_pinjam' => '15/10/2023',
+                'sisa_durasi' => '1'
+            ]
+        ],
+        'riwayat_pinjam' => [
+            [
+                'no' => 1,
+                'judul' => 'Lorem',
+                'pengarang' => 'Doe',
+                'penerbit' => 'Atma Jaya',
+                'tgl_pinjam' => '18/10/2023',
+                'tgl_kembali' => '20/10/2023',
+                'denda' => 'Rp. 10.000'
+            ],
+            [
+                'no' => 2,
+                'judul' => 'Ipsum',
+                'pengarang' => 'Joe',
+                'penerbit' => 'UAJY Lib',
+                'tgl_pinjam' => '15/10/2021',
+                'tgl_kembali' => '20/10/2023',
+                'denda' => 'Rp. 20.000'
+            ]
+        ]
+    ]);
 });
 
 Route::get('/user/bayar_tagihan', function () {
@@ -38,7 +122,15 @@ Route::get('/user/bayar_tagihan', function () {
 });
 
 Route::get('/user/profile', function () {
-    return view('user/profile_user');
+    return view('user/profile_user', [
+        'user' => [
+            'nama' => 'John Doe',
+            'email' => 'johndoe@gmail.com',
+            'alamat' => 'Jl. Lorem Ipsum',
+            'no_telp' => '08123456789',
+            'profile_picture' => '../images/person.jpg'
+        ]
+    ]);
 });
 
 Route::get('/admin', function () {
@@ -64,11 +156,43 @@ Route::get('/admin', function () {
 });
 
 Route::get('/admin/tambah_peminjaman', function () {
-    return view('admin/tambah_peminjaman');
+    return view('admin/tambah_peminjaman', [
+        'buku' =>     [
+            [
+                'no' => 1,
+                'judul' => 'Lorem',
+                'pengarang' => 'Doe',
+                'penerbit' => 'Atma Jaya',
+                'jumlah' => 10
+            ],
+            [
+                'no' => 2,
+                'judul' => 'Ipsum',
+                'pengarang' => 'Joe',
+                'penerbit' => 'UAJY Lib',
+                'jumlah' => 3
+            ]
+        ]
+    ]);
 });
 
 Route::get('/admin/pengembalian', function () {
-    return view('admin/pengembalian_buku');
+    return view('admin/pengembalian_buku', [
+        'buku' =>     [
+            [
+                'no' => 1,
+                'judul' => 'Lorem',
+                'jadwalKembali' => '20/10/2023',
+                'denda' => 'Rp. 10.000'
+            ],
+            [
+                'no' => 2,
+                'judul' => 'Ipsum',
+                'jadwalKembali' => '18/10/2023',
+                'denda' => 'Rp. 20.000'
+            ]
+        ]
+    ]);
 });
 
 Route::get('/admin/tambah_buku', function () {
